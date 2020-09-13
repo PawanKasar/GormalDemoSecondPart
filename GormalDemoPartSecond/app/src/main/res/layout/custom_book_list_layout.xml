@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/card"
     android:layout_margin="@dimen/_3sdp">
 
     <LinearLayout
@@ -19,9 +17,9 @@
 
 
         <ImageView
-            android:id="@+id/iv_MycourseImage"
-            android:layout_width="@dimen/_60sdp"
-            android:layout_height="@dimen/_60sdp"
+            android:id="@+id/iv_bookImage"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
             android:src="@drawable/ic_launcher_foreground"
             android:scaleType="fitXY"/>
 
@@ -32,128 +30,88 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_70sdp"
             android:orientation="vertical"
-            android:weightSum="2">
+            android:weightSum="3"
+            android:layout_marginLeft="@dimen/_5sdp">
 
             <TextView
-                android:id="@+id/tv_MycourseTitle"
-                android:layout_marginTop="1dp"
-                android:paddingLeft="@dimen/_5sdp"
+                android:id="@+id/tv_bookTitle"
+                android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Course Title"
+                android:gravity="top"
+                android:text="Happy"
                 android:textStyle="normal"
                 android:textSize="15sp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"/>
 
-            <LinearLayout
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:id="@+id/tv_bookDesc"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_10sdp">
+                android:text="asdasdsdasdasdasdasdasdadasdadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadasdadasd"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"/>
 
-
-                <TextView
-                    android:id="@+id/tv_MycourseCreatorName"
-                    android:layout_marginTop="@dimen/_1sdp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Course Creator"
-                    android:textSize="11sp"
-                    android:textStyle="normal"
-                    android:textAllCaps="false"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/tv_MycourseSlash"
-                    android:layout_marginTop="1dp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:textStyle="normal"
-                    android:textAllCaps="false"
-                    android:layout_gravity="bottom"/>
-
-                <TextView
-                    android:id="@+id/tv_MycourseCategory"
-                    android:layout_marginTop="1dp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Category"
-                    android:textSize="11sp"
-                    android:textStyle="normal"
-                    android:textAllCaps="false"
-                    android:layout_gravity="bottom"
-                    android:textColor="@color/black"/>
-            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:layout_weight="1">
+
 
                 <TextView
-                    android:id="@+id/tv_MycourseLanguage"
+                    android:id="@+id/tv_bookAuthor"
                     android:paddingLeft="@dimen/_5sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Language"
+                    android:text="asdasdsdasd"
                     android:textSize="11sp"
                     android:textStyle="normal"
                     android:textAllCaps="false"
-                    android:layout_gravity="bottom"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_5sdp" />
 
-                <TextView
-                    android:id="@+id/tv_MycourseSlash_2"
-                    android:layout_marginTop="1dp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textSize="11sp"
-                    android:textStyle="normal"
-                    android:textAllCaps="false"
-                    android:layout_gravity="bottom"/>
-
-                <TextView
-                    android:id="@+id/tv_MycourseDuration"
-                    android:layout_marginTop="1dp"
-                    android:paddingLeft="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Duration"
-                    android:textSize="11sp"
-                    android:textStyle="normal"
-                    android:textAllCaps="false"
-                    android:layout_gravity="bottom"
-                    android:textColor="@color/black"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="right">
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
 
                     <TextView
-                        android:id="@+id/tv_MycourseStartLearning"
-                        android:layout_marginTop="1dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Start Learning"
-                        android:textSize="10sp"
+                        android:text="Price : "
+                        android:textSize="11sp"
                         android:textStyle="normal"
-                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+
+                    <TextView
+                        android:id="@+id/tv_bookPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="11sp"
+                        android:textStyle="normal"
                         android:textAllCaps="false"
-                        android:layout_marginRight="@dimen/_5sdp"
-                        android:background="@drawable/curve_corner_purple" />
+                        android:layout_marginRight="@dimen/_5sdp"/>
 
                 </LinearLayout>
             </LinearLayout>
